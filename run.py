@@ -44,7 +44,7 @@ def four_choice_option(opt1, opt2, opt3, opt4):
     valid, it will ask for input again
     """
     while True:
-        choice = input ("Which path do you choose? (1/2/3/4): \n")
+        choice = input("Which path do you choose? (1/2/3/4): \n")
         try:
             input_int = int(choice)
             if input_int == 1:
@@ -102,3 +102,21 @@ def start_game():
             break
     typing(f"Salve {PLAYER_NAME}. Alae iacta est! (Greetings {PLAYER_NAME}. The die is cast!\n\n", 0.03)
     option_one()
+
+
+    def option_one():
+
+        typing("It is the year. Constantine III has taken his army to Gaul and left Britania defenceless.\n", 0.01)
+        typing("You are a lone Roman Centurion, the last at your fort.\n", 0.01)
+        typing("Your Pilus Prior (commander of your cohort) has left a mission for you.\n", 0.01)
+        typing("If within 6 months, the army does not return seek out... .\n", 0.01)
+        typing("..Flavius Sanctus in Aquae Sulis and Lucius Septimius in Durnovana.\n", 0.01)
+
+        two_choice_option("Do you go West to Aquae Sulis or South to Durnovana? (west/south): \n",
+            "west", "south", option_two, option_three)
+
+
+    def option_two():
+
+  
+    def option_three():

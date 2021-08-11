@@ -100,7 +100,7 @@ def start_game():
             continue
         else:
             break
-    typing(f"Salve {PLAYER_NAME}. Alae iacta est! (Greetings {PLAYER_NAME}. The die is cast!\n\n", 0.03)
+    typing(f"Salve {PLAYER_NAME}. Alae iacta est! (Greetings {PLAYER_NAME}. The die is cast!)\n\n", 0.03)
     option_one()
 
 
@@ -119,7 +119,7 @@ def option_one():
 def option_two():
 
 
-#def option_three():
+def option_three():
 
 
 start_game()

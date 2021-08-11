@@ -104,19 +104,23 @@ def start_game():
     option_one()
 
 
-    def option_one():
+def option_one():
 
-        typing("It is the year. Constantine III has taken his army to Gaul and left Britania defenceless.\n", 0.01)
-        typing("You are a lone Roman Centurion, the last at your fort.\n", 0.01)
-        typing("Your Pilus Prior (commander of your cohort) has left a mission for you.\n", 0.01)
-        typing("If within 6 months, the army does not return seek out... .\n", 0.01)
-        typing("..Flavius Sanctus in Aquae Sulis and Lucius Septimius in Durnovana.\n", 0.01)
+    typing("It is the year. Constantine III has taken his army to Gaul and left Britania defenceless.\n", 0.01)
+    typing("You are a lone Roman Centurion, the last at your fort.\n", 0.01)
+    typing("Your Pilus Prior (commander of your cohort) has left a mission for you.\n", 0.01)
+    typing("If within 6 months, the army does not return seek out... .\n", 0.01)
+    typing("..Flavius Sanctus in Aquae Sulis and Lucius Septimius in Durnovana.\n", 0.01)
 
-        two_choice_option("Do you go West to Aquae Sulis or South to Durnovana? (west/south): \n",
-            "west", "south", option_two, option_three)
+    two_choice_option("Do you go West to Aquae Sulis or South to Durnovana? (west/south): \n",
+        "west", "south", option_two, option_three)
 
 
-    def option_two():
+def option_two():
 
-  
-    def option_three():
+
+#def option_three():
+
+
+start_game()
+

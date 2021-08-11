@@ -22,7 +22,7 @@ def two_choice_option(prompt, opt1, opt2, path1, path2):
     and given path is executed.
     """
     while True:
-        choice =input(prompt)
+        choice = input(prompt)
         if choice == opt1:
             path1()
             break
@@ -30,8 +30,7 @@ def two_choice_option(prompt, opt1, opt2, path1, path2):
             path2()
             break
         else:
-            print()
-            print(f"Please enter a valid option! ({opt1} or {opt2}\n")
+            print(f"\nPlease enter a valid option! ({opt1} or {opt2}\n")
             continue
 
 
@@ -63,7 +62,7 @@ def four_choice_option(opt1, opt2, opt3, opt4):
                 print("Please enter correct option (1/2/3/4.")
                 continue
         except ValueError:
-            print("You must enter a 'number', try again")
+            print("You must enter a 'number', try again\n")
 
 
 def intro_msg():
@@ -73,13 +72,11 @@ def intro_msg():
     Function to print welcome graphics.
     """
 
-    print()
     typing("##################################\n", 0.01)
     typing("#                                #\n", 0.01)
     typing("#   The Fall of Roman Britain    #\n", 0.01)
     typing("#                                #\n", 0.01)
     typing("##################################\n\n", 0.01)
-
 
 
 def start_game():
@@ -89,12 +86,10 @@ def start_game():
 
     intro_msg()
 
-
     while True:
 
         global PLAYER_NAME
-        PLAYER_NAME = input("Please enter a name for your character: \n")
-        print()
+        PLAYER_NAME = input("Please enter a name for your character: \n\n")
         if PLAYER_NAME == "":
             print("Please enter a character name to continue...\n")
             continue
@@ -116,10 +111,10 @@ def option_one():
         "west", "south", option_two, option_three)
 
 
-def option_two():
+# def option_two():
 
 
-def option_three():
+# def option_three():
 
 
 start_game()

@@ -1,18 +1,15 @@
-import sys
-import time
 
 
-def typing(text, speed):
-    """
-    Modified print function. Introduces timing in-between characters.
-    text = The text you wish to print.
-    speed = Adjusts the timing in-between characters.
-    """
-    for char in text:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(speed)
-
+# def typing(text, speed):
+# """
+# Modified print function. Introduces timing in-between characters.
+# text = The text you wish to print.
+# speed = Adjusts the timing in-between characters.
+# """
+# for char in text:
+#     sys.stdout.write(char)
+#     sys.stdout.flush()
+#     time.sleep(speed)
 
 def two_choice_option(prompt, opt1, opt2, path1, path2):
     """
@@ -72,11 +69,11 @@ def intro_msg():
     Function to print welcome graphics.
     """
 
-    typing("##################################\n", 0.01)
-    typing("#                                #\n", 0.01)
-    typing("#   The Fall of Roman Britain    #\n", 0.01)
-    typing("#                                #\n", 0.01)
-    typing("##################################\n\n", 0.01)
+    print("##################################\n")
+    print("#                                #\n")
+    print("#   The Fall of Roman Britain    #\n")
+    print("#                                #\n")
+    print("##################################\n\n")
 
 
 def start_game():
@@ -95,26 +92,61 @@ def start_game():
             continue
         else:
             break
-    typing(f"Salve {PLAYER_NAME}. Alae iacta est! (Greetings {PLAYER_NAME}. The die is cast!)\n\n", 0.03)
+    print(f"Salve {PLAYER_NAME}. Alae iacta est! (Greetings {PLAYER_NAME}. The die is cast!)\n\n")
     option_one()
 
 
 def option_one():
 
-    typing("It is the year. Constantine III has taken his army to Gaul and left Britania defenceless.\n", 0.01)
-    typing("You are a lone Roman Centurion, the last at your fort.\n", 0.01)
-    typing("Your Pilus Prior (commander of your cohort) has left a mission for you.\n", 0.01)
-    typing("If within 6 months, the army does not return seek out... .\n", 0.01)
-    typing("..Flavius Sanctus in Aquae Sulis and Lucius Septimius in Durnovana.\n", 0.01)
+    print("It is the year. Constantine III has taken his army to Gaul and left Britania defenceless.\n")
+    print("You are a lone Roman Centurion, the last at your fort.\n")
+    print("Your Pilus Prior (commander of your cohort) has left a mission for you.\n")
+    print("If within 6 months, the army does not return seek out... .\n")
+    print("..Flavius Sanctus in Aquae Sulis and Lucius Septimius in Durnovana.\n")
 
     two_choice_option("Do you go West to Aquae Sulis or South to Durnovana? (west/south): \n",
         "west", "south", option_two, option_three)
 
 
-# def option_two():
+def option_two():
+
+    print("You take the road West towards Aquae Sulis.")
+    print("As you a approach a bend in the road you spot two Celtic bandits")
+
+    two_choice_option("Do you attack the bandits or try to hide? (attack/hide): \n",
+    "attack", "hide", option_four, option_five)
 
 
-# def option_three():
+def option_three():
+
+    print("You take the road South towards Durnovana.")
+    print("In the distance you see a large group of Saxon bandits approaching.")
+    print("They haven't seen you yet.")
+
+    two_choice_option("Do you attack the bandits or try to hide? (attack/hide): \n",
+    "attack", "hide", option_six, option_seven)
+
+
+def option_four():
+
+    print("You defeat the two bandits, easily, you years of experience kickin in")
+    print("You continue along the road towards Aquae Sulis")
+
+
+def option_five():
+
+    print("The bandits spot you hiding by the roadside & run you through with their spears")
+
+
+def option_six():
+
+    print("You attempt to surprise the bandits with an attack, but they are too many & you are..")
+    print("...overwhelmed.")
+
+
+def option_seven():
+
+    print("You successfully hide in a ditch by the roadside and the bandits pass you by.")
 
 
 start_game()

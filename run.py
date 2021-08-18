@@ -104,11 +104,11 @@ def story_intro():
 
 def road_west():
 
-    print("You take the road West towards Aquae Sulis.")
-    print("As you a approach a bend in the road you spot two Celtic bandits")
+    print("You take the road, known as the Fosse Way, West towards Aquae Sulis.")
+    print("As you a approach a bend in the road you spot a lone Celtic bandit")
 
-    two_choice_option("Do you attack the bandits or try to hide? (attack/hide): \n",
-    "attack", "hide", attack_c_bandits, hide_c_bandits)
+    two_choice_option("Do you attack the bandit or try to hide? (attack/hide): \n",
+    "attack", "hide", attack_c_bandit, hide_c_bandit)
 
 
 def road_south():
@@ -121,21 +121,34 @@ def road_south():
     "attack", "hide", attack_s_bandits, hide_s_bandits)
 
 
-def attack_c_bandits():
+def attack_c_bandit():
 
-    print("You defeat the two bandits, easily, you years of experience kickin in")
-    print("You continue along the road towards Aquae Sulis")
+    print("You defeat the lone bandit easily, your years of experience kickin in")
+    print("You continue along the road towards Aquae Sulis, noticing how")
+    print("...the lack of available Lapidarii (stoneworkers) has left the surface")
+    print("...of the road in a poor state.")
+    print("Normally they would be resurfaced yearly, but it has clearly been some")
+    print("time since that was true.")
+
+    two_choice_option("Continue to Aquae Sulis? (continue): \n",
+    "continue", "continue", approach_aquae_sulis, approach_aquae_sulis)
 
 
-def hide_c_bandits():
+def hide_c_bandit():
 
-    print("The bandits spot you hiding by the roadside & run you through with their spears")
+    print("The bandit spots you hiding below the roadside & runs you through with their spear")
 
+def approach_aquae_sulis():
+    print("You eventually cross the River Avon and take a smaller road left")
+    print("to follow it, finally seeing the walls of Aquae Sulis in the distance.")
+    print("When you finally near the gates of the town the sun is low in the sky")
+    print("and you see several guards begin to light lamps.")
+    print("You anounce yourself to the centurions guarding the gate.")
 
 def attack_s_bandits():
 
-    print("You attempt to surprise the bandits with an attack, but they are too many & you are..")
-    print("...overwhelmed.")
+    print("You attempt to surprise the bandits with an attack, but they are too many & you are")
+    print("overwhelmed.")
 
 
 def hide_s_bandits():

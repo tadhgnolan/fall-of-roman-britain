@@ -16,7 +16,7 @@ def play_again(option):
         option()
     else:
         print("Gratias tibi ago! (Thanks for playing!)")
-        
+
 
 def two_choice_option(prompt, opt1, opt2, path1, path2):
     """
@@ -162,7 +162,8 @@ def attack_s_bandits():
 
     print("You attempt to surprise the bandits with an attack, but they are too many & you are")
     print("overwhelmed.")
-
+    game_over("You are gravely wounded and die below the roadside, mission incomplete.\n",
+    start_game)
 
 def hide_s_bandits():
 

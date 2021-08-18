@@ -2,8 +2,21 @@
 
 def game_over(msg, function):
     """
-
+    Game over message and function. Allows player to restart the game.
     """
+    print(msg)
+    print("\n GAME OVER \n")
+    play_again(function)
+
+
+def play_again(option):
+    print("To play again type 'yes': \n")
+    choice = input()
+    if choice == "yes":
+        option()
+    else:
+        print("Gratias tibi ago! (Thanks for playing!)")
+        
 
 def two_choice_option(prompt, opt1, opt2, path1, path2):
     """

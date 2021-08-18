@@ -11,7 +11,7 @@ def game_over(msg, function):
 
 
 def play_again(option):
-    print("To play again type 'yes': \n")
+    print("To play again type 'yes', to exit type anything else: \n")
     choice = input()
     if choice == "yes":
         option()
@@ -85,13 +85,19 @@ def intro_msg():
     Function to print welcome graphics.
     """
 
-    print("##################################")
-    print("#                                #")
-    print("#                                #")
-    print("#   The Fall of Roman Britain    #")
-    print("#                                #")
-    print("#                                #")
-    print("##################################\n\n")
+    print("##########################################################################")
+    print("#                                                                        #")
+    print("#                    The Fall of Roman Britain                           #")
+    print("#                                                                        #")
+    print("#                                               _____                    #")
+    print("#     _________________________________________|     \           ____    #") 
+    print("#    /                                         |     ||---------/    \   #")
+    print("#  /___________________________________________|     ||        |      |  #")
+    print("#  \                                           |     ||        |      |  #")
+    print("#    \_________________________________________|     ||---------\____/   #")
+    print("#                                              |_____/                   #")
+    print("#                                                                        #")
+    print("##########################################################################\n\n")
 
 
 def start_game():
@@ -110,18 +116,18 @@ def start_game():
             continue
         else:
             break
-    print(f"Salve {PLAYER_NAME}. Alae iacta est! (Greetings {PLAYER_NAME}. The die is cast!)\n\n")
+    print(f"\n\n Salve {PLAYER_NAME}. Alae iacta est! (Greetings {PLAYER_NAME}. The die is cast!)\n\n")
     story_intro()
 
 
 # Intro/start of story.
 def story_intro():
 
-    print("It is the year. Constantine III has taken his army to Gaul and left Britania defenceless.\n")
+    print("It is late in the year 407AD. Constantine III has taken his army to Gaul and left Britania defenceless.\n")
     print("You are a lone Roman Centurion, the last at your fort.\n")
     print("Your Pilus Prior (commander of your cohort) has left a mission for you.\n")
     print("If within 6 months, the army does not return seek out... .\n")
-    print("..Flavius Sanctus in Aquae Sulis and Lucius Septimius in Durnovana.\n")
+    print("Flavius Sanctus in Aquae Sulis.\n")
 
     two_choice_option("Do you go West to Aquae Sulis or South to Durnovana? (west/south): \n",
         "west", "south", road_west, road_south)
@@ -130,8 +136,8 @@ def story_intro():
 # Western route. ******************************************************************************************************
 def road_west():
 
-    print("You take the road West, known as the Fosse Way, towards Aquae Sulis.")
-    print("As you a approach a bend in the road you spot a lone Celtic bandit")
+    print("You take the road West, off the main Fosse Way, towards Aquae Sulis. \n")
+    print("As you a approach a bend in the road you spot a lone Celtic bandit \n")
 
     two_choice_option("Do you attack the bandit or try to hide? (attack/hide): \n",
     "attack", "hide", attack_c_bandit, hide_c_bandit)
@@ -139,11 +145,11 @@ def road_west():
 
 def attack_c_bandit():
 
-    print("You defeat the lone bandit easily, your years of experience kickin in")
-    print("You continue along the road towards Aquae Sulis, noticing how")
-    print("...the lack of available Lapidarii (stoneworkers) has left the surface")
-    print("...of the road in a poor state.")
-    print("Normally they would be resurfaced yearly, but it has clearly been some")
+    print("You defeat the lone bandit easily, your years of experience kicking in.\n")
+    print("You continue along the road towards Aquae Sulis, noticing how... \n")
+    print("the lack of available Lapidarii (stoneworkers) has left the surface... \n")
+    print("of the road in a poor state. \n")
+    print("Normally they would be resurfaced yearly, but it has clearly been some... \n")
     print("time since that was true.")
 
     two_choice_option("Continue to Aquae Sulis? (continue): \n",
@@ -152,22 +158,22 @@ def attack_c_bandit():
 
 def hide_c_bandit():
 
-    print("The bandit spots you hiding below the roadside & runs you through with their spear")
+    print("The bandit spots you hiding below the roadside & runs you through with their spear.")
 
 def approach_aquae_sulis():
-    print("You eventually cross the River Avon and take a smaller road left")
-    print("to follow it, finally seeing the walls of Aquae Sulis in the distance.")
-    print("When you finally near the gates of the town the sun is low in the sky")
-    print("and you see several guards begin to light lamps.")
-    print("You anounce yourself to the centurions guarding the gate.")
+    print("You eventually cross the River Avon and take a smaller road left... \n")
+    print("to follow the river, finally seeing the walls of Aquae Sulis in the distance. \n")
+    print("When you finally near the gates of the town the sun is low in the sky... \n")
+    print("and you see several guards begin to light lamps. \n")
+    print("You anounce yourself to the centurions guarding the gate. \n")
 
 
 # Southern route. *****************************************************************************************************
 def road_south():
 
-    print("You take the road South towards Durnovana.")
-    print("In the distance you see a large group of Saxon bandits approaching.")
-    print("They haven't seen you yet.")
+    print("You take the road South towards Durnovana. \n")
+    print("In the distance you see a large group of Saxon bandits approaching. \n")
+    print("They haven't seen you yet. \n")
 
     two_choice_option("Do you attack the bandits or try to hide? (attack/hide): \n",
     "attack", "hide", attack_s_bandits, hide_s_bandits)
@@ -175,14 +181,14 @@ def road_south():
 
 def attack_s_bandits():
 
-    print("You attempt to surprise the bandits with an attack, but they are too many & you are")
-    print("overwhelmed.")
+    print("You attempt to surprise the bandits with an attack, but they are too many & you are... \n")
+    print("overwhelmed. \n")
     game_over("You are gravely wounded and die below the roadside, mission incomplete.\n",
     start_game)
 
 def hide_s_bandits():
 
-    print("You successfully hide in a ditch by the roadside and the bandits pass you by.")
+    print("You successfully hide in a ditch by the roadside and the bandits pass you by. \n")
 
 
 start_game()

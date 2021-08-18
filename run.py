@@ -1,4 +1,5 @@
 
+# Main game functions
 
 def game_over(msg, function):
     """
@@ -37,11 +38,19 @@ def two_choice_option(prompt, opt1, opt2, path1, path2):
             print(f"\nPlease enter a valid option! ({opt1} or {opt2}\n")
             continue
 
+def three_choice_option(opt1, opt2, opt3):
+    """
+    Function allows for a 3 point multiple choice option.
+    If inpput is valid, story will continue.
+    If input is not an integer, it will throw a ValueError
+    and prompt for input again. If the input is an integer but is not
+    valid, it will ask for input again
+    """
 
 def four_choice_option(opt1, opt2, opt3, opt4):
     """
-    Function allows for a 4 point multiple choice option,
-    if input is valid, story will continue.
+    Function allows for a 4 point multiple choice option.
+    If input is valid, story will continue.
     If input is not an integer, it will throw a ValueError
     and prompt for input again. If the input is an integer but is not
     valid, it will ask for input again
@@ -76,10 +85,12 @@ def intro_msg():
     Function to print welcome graphics.
     """
 
-    print("##################################\n")
-    print("#                                #\n")
-    print("#   The Fall of Roman Britain    #\n")
-    print("#                                #\n")
+    print("##################################")
+    print("#                                #")
+    print("#                                #")
+    print("#   The Fall of Roman Britain    #")
+    print("#                                #")
+    print("#                                #")
     print("##################################\n\n")
 
 
@@ -103,6 +114,7 @@ def start_game():
     story_intro()
 
 
+# Intro/start of story.
 def story_intro():
 
     print("It is the year. Constantine III has taken his army to Gaul and left Britania defenceless.\n")
@@ -115,23 +127,14 @@ def story_intro():
         "west", "south", road_west, road_south)
 
 
+# Western route. ******************************************************************************************************
 def road_west():
 
-    print("You take the road, known as the Fosse Way, West towards Aquae Sulis.")
+    print("You take the road West, known as the Fosse Way, towards Aquae Sulis.")
     print("As you a approach a bend in the road you spot a lone Celtic bandit")
 
     two_choice_option("Do you attack the bandit or try to hide? (attack/hide): \n",
     "attack", "hide", attack_c_bandit, hide_c_bandit)
-
-
-def road_south():
-
-    print("You take the road South towards Durnovana.")
-    print("In the distance you see a large group of Saxon bandits approaching.")
-    print("They haven't seen you yet.")
-
-    two_choice_option("Do you attack the bandits or try to hide? (attack/hide): \n",
-    "attack", "hide", attack_s_bandits, hide_s_bandits)
 
 
 def attack_c_bandit():
@@ -157,6 +160,18 @@ def approach_aquae_sulis():
     print("When you finally near the gates of the town the sun is low in the sky")
     print("and you see several guards begin to light lamps.")
     print("You anounce yourself to the centurions guarding the gate.")
+
+
+# Southern route. *****************************************************************************************************
+def road_south():
+
+    print("You take the road South towards Durnovana.")
+    print("In the distance you see a large group of Saxon bandits approaching.")
+    print("They haven't seen you yet.")
+
+    two_choice_option("Do you attack the bandits or try to hide? (attack/hide): \n",
+    "attack", "hide", attack_s_bandits, hide_s_bandits)
+
 
 def attack_s_bandits():
 

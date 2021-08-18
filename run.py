@@ -1,15 +1,9 @@
 
 
-# def typing(text, speed):
-# """
-# Modified print function. Introduces timing in-between characters.
-# text = The text you wish to print.
-# speed = Adjusts the timing in-between characters.
-# """
-# for char in text:
-#     sys.stdout.write(char)
-#     sys.stdout.flush()
-#     time.sleep(speed)
+def game_over(msg, function):
+    """
+
+    """
 
 def two_choice_option(prompt, opt1, opt2, path1, path2):
     """
@@ -93,10 +87,10 @@ def start_game():
         else:
             break
     print(f"Salve {PLAYER_NAME}. Alae iacta est! (Greetings {PLAYER_NAME}. The die is cast!)\n\n")
-    option_one()
+    story_intro()
 
 
-def option_one():
+def story_intro():
 
     print("It is the year. Constantine III has taken his army to Gaul and left Britania defenceless.\n")
     print("You are a lone Roman Centurion, the last at your fort.\n")
@@ -105,46 +99,46 @@ def option_one():
     print("..Flavius Sanctus in Aquae Sulis and Lucius Septimius in Durnovana.\n")
 
     two_choice_option("Do you go West to Aquae Sulis or South to Durnovana? (west/south): \n",
-        "west", "south", option_two, option_three)
+        "west", "south", road_west, road_south)
 
 
-def option_two():
+def road_west():
 
     print("You take the road West towards Aquae Sulis.")
     print("As you a approach a bend in the road you spot two Celtic bandits")
 
     two_choice_option("Do you attack the bandits or try to hide? (attack/hide): \n",
-    "attack", "hide", option_four, option_five)
+    "attack", "hide", attack_c_bandits, hide_c_bandits)
 
 
-def option_three():
+def road_south():
 
     print("You take the road South towards Durnovana.")
     print("In the distance you see a large group of Saxon bandits approaching.")
     print("They haven't seen you yet.")
 
     two_choice_option("Do you attack the bandits or try to hide? (attack/hide): \n",
-    "attack", "hide", option_six, option_seven)
+    "attack", "hide", attack_s_bandits, hide_s_bandits)
 
 
-def option_four():
+def attack_c_bandits():
 
     print("You defeat the two bandits, easily, you years of experience kickin in")
     print("You continue along the road towards Aquae Sulis")
 
 
-def option_five():
+def hide_c_bandits():
 
     print("The bandits spot you hiding by the roadside & run you through with their spears")
 
 
-def option_six():
+def attack_s_bandits():
 
     print("You attempt to surprise the bandits with an attack, but they are too many & you are..")
     print("...overwhelmed.")
 
 
-def option_seven():
+def hide_s_bandits():
 
     print("You successfully hide in a ditch by the roadside and the bandits pass you by.")
 

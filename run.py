@@ -1,5 +1,5 @@
-
 # Main game functions
+
 
 def game_over(msg, function):
     """
@@ -69,7 +69,7 @@ def three_choice_option(prompt, opt1, opt2, opt3, path1, path2, path3):
         else:
             print(f"\nPlease enter a valid option! ({opt1}, {opt2} or {opt3}\n")
             continue
-    
+ 
 
 def four_choice_option(opt1, opt2, opt3, opt4):
     """
@@ -121,6 +121,7 @@ def intro_msg():
     print("#    \_________________________________________|     ||---------\____/   #")
     print("#                                              |_____/                   #")
     print("#                                                                        #")
+    print("#                          By Tadhg Nolan                                #")
     print("##########################################################################\n\n")
 
 
@@ -204,7 +205,7 @@ def as_guards():
     three_choice_option("Ask what happened to the town?(town)\n\
          the townspeople? (people)\n\
          or Flavius Sanctus? (flavius)\n",
-    "town", "people", "flavius", as_town, as_people, as_flavius)
+        "town", "people", "flavius", as_town, as_people, as_flavius)
 
 
 def as_town():
@@ -252,15 +253,93 @@ def as_avenue():
 
 
 def as_temple():
-    print("temple")
+    print("You walk towards the modest square, wooden temple, dedicated to the godess Sulis Minerva.\n")
+    print("As you enter through the front, you notice members of the godess's cult making offerings...\n")
+    print("to her statue, enshrined on an alter at the rounded back of the temple.\n")
+
+    two_choice_option("Explore the theatre? (theatre)\n\
+        or continue to the baths, forum and basilica? (bath)\n",
+        "theatre", "bath", as_theatre, as_bath)
 
 
 def as_theatre():
-    print("theatre")
+    print("As you approach the amphitheatre you notice all of the wooden benches have been...\n")
+    print("either broken or burned, leaving behind the stone steps underneath.\n")
+    print("Some of the masonry has started to crumble as well. It is a shadow of its former self.")
 
+    two_choice_option("Explore the temple? (temple)\n\
+        or continue to the baths, forum and basilica? (bath)\n",
+        "temple", "bath", as_temple, as_bath)
 
 def as_bath():
-    print("bath")
+    print("You walk further along the East-West avenue, towards the baths, forum and basilica\n")
+
+    three_choice_option("Explore the baths? (thermae),\n\
+        the forum? (forum)\n\
+        or the basilica? (basilica)\n",
+        "thermae", "forum", "basilica", as_thermae, as_forum, as_basilica)
+
+
+def as_thermae():
+    print("The baths are a large complex of stone buildings, split up into naturally....\n")
+    print("& furnace heated baths of differing temperatures as well as sweat rooms.\n")
+    print("It seems to be well maintained, despite the state of the rest of the town...\n")
+    print("and you can hear that the furnaces are still being operated.\n")
+    print("If you had more time, you would like to enjoy their use.\n")
+
+    two_choice_option("Explore the forum? (forum)\n\
+        or the basilica? (basilica)\n",
+        "forum", "basilica", as_forum, as_basilica)
+
+
+def as_forum():
+    print("You approach the forum, a large open rectangular space surrounded by columns.\n")
+    print("It is normally the site of all the towns major social, political and...\n")
+    print("religious gatherings and festivals, but there are signs it hasn't...\n")
+    print("been used in a some time. Debris and animal excrement litter the cobbles.\n")
+    
+    two_choice_option("Explore the baths? (thermae) or the basilica? (basilica)\n",
+       "thermae", "basilica", as_thermae, as_basilica)
+
+
+def as_basilica():
+    print("The basilica is a large rectangular stone building with a vaulted...\n")
+    print("roof, very similar in layout to a modern church. It serves the purpose...\n")
+    print("of court house, administrative center as well as many other functions.\n")
+    print("There are many members of a cohort standing gathered all around the interior.\n")
+    print("At the far end you spot Flavius Sanctus speaking to members of the cohort.\n")
+
+    cont("Type cont to continue. (cont):\n",
+    "cont", the_mission)
+
+
+def the_mission():
+    print("As you approach, Flavius turns towards you and says...\n")
+    print(f"'Ah {PLAYER_NAME}. Welcome. Right on time, just as Gnaeus Calvinus...\n")
+    print("said you would be.' This takes you aback somewhat. As far as...\n")
+    print("you were aware, this was just a contingency plan.\n")
+    print("Snapping back to attention and realising who you're speaking to,\n")
+    print("you ask 'How may I be of service.\n")
+
+    cont("Type cont to continue. (cont):\n",
+    "cont", the_mission_2)
+
+
+def the_mission_2():
+    print("'Straight to business, eh?' He chuckles wryly.\n")
+    print("As you are aware, the situation is not good for Britannia.\n")
+    print("Contact with Rome has become more and more sparse...\n")
+    print("and we have precious few defenders left.\n")
+    print("I need you to bring this scroll to Lucius Septimius...\n")
+    print("in Durnovana as quickly as possible.\n")
+
+    cont("Type cont to continue. (cont):\n",
+    "cont", the_mission_3)
+
+
+def the_mission_3():
+    print("the mission 3")
+
 
 
 # Southern route. *****************************************************************************************************

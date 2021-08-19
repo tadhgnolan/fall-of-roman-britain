@@ -1,3 +1,4 @@
+import termcolor
 # Main game functions
 
 
@@ -148,8 +149,8 @@ def start_game():
 # Intro/start of story.
 def story_intro():
 
-    print("It is late in the year 407AD. Constantine III has taken his army to Gaul and...\n")
-    print("left Britania defenceless.\n")
+    termcolor.cprint("It is late in the year 407 AD. Constantine III has taken his army to Gaul...\n", 'red')
+    print("and left Britannia defenceless.\n")
     print("You are a lone Roman Centurion, the last at your fort.\n")
     print("Your Pilus Prior (commander of your cohort) has left a mission for you.\n")
     print("If within 6 months, the army does not return seek out... .\n")

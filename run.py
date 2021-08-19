@@ -110,20 +110,20 @@ def intro_msg():
     Function to print welcome graphics.
     """
 
-    print("##########################################################################")
-    print("#                                                                        #")
-    print("#                    The Fall of Roman Britain                           #")
-    print("#                                                                        #")
-    print("#                                               _____                    #")
-    print("#     _________________________________________|     \           ____    #") 
-    print("#    /                                         |     ||---------/    \   #")
-    print("#  /___________________________________________|     ||        |      |  #")
-    print("#  \                                           |     ||        |      |  #")
-    print("#    \_________________________________________|     ||---------\____/   #")
-    print("#                                              |_____/                   #")
-    print("#                                                                        #")
-    print("#                          By Tadhg Nolan                                #")
-    print("##########################################################################\n\n")
+    termcolor.cprint("##########################################################################", 'green')
+    termcolor.cprint("#                                                                        #", 'green')
+    termcolor.cprint("#                    The Fall of Roman Britain                           #", 'green')
+    termcolor.cprint("#                                                                        #", 'green')
+    termcolor.cprint("#                                               _____                    #", 'green')
+    termcolor.cprint("#     _________________________________________|     \           ____    #", 'green') 
+    termcolor.cprint("#    /                                         |     ||---------/    \   #", 'green')
+    termcolor.cprint("#  /___________________________________________|     ||        |      |  #", 'green')
+    termcolor.cprint("#  \                                           |     ||        |      |  #", 'green')
+    termcolor.cprint("#    \_________________________________________|     ||---------\____/   #", 'green')
+    termcolor.cprint("#                                              |_____/                   #", 'green')
+    termcolor.cprint("#                                                                        #", 'green')
+    termcolor.cprint("#                          By Tadhg Nolan                                #", 'green')
+    termcolor.cprint("##########################################################################\n\n", 'green')
 
 
 def start_game():
@@ -149,7 +149,7 @@ def start_game():
 # Intro/start of story.
 def story_intro():
 
-    termcolor.cprint("It is late in the year 407 AD. Constantine III has taken his army to Gaul...\n", 'red')
+    termcolor.cprint("It is late in the year 407 AD. Constantine III has taken his army to Gaul...\n", 'green')
     print("and left Britannia defenceless.\n")
     print("You are a lone Roman Centurion, the last at your fort.\n")
     print("Your Pilus Prior (commander of your cohort) has left a mission for you.\n")
@@ -172,11 +172,15 @@ def road_west():
 
 def attack_c_bandit():
 
-    print("\nYou defeat the lone bandit easily, your years of experience kicking in.\n")
-    print("You continue along the road towards Aquae Sulis, noticing how... \n")
-    print("the lack of available Lapidarii (stoneworkers) has left the surface... \n")
+    print("\nYou defeat the lone bandit easily, your years of experience\n\
+        kicking in.\n")
+    print("You continue along the road towards Aquae Sulis, noticing\n\
+        how...\n")
+    print("the lack of available Lapidarii (stoneworkers) has left the\n\
+        surface...\n")
     print("of the road in a poor state. \n")
-    print("Normally they would be resurfaced yearly, but it has clearly been some... \n")
+    print("Normally they would be resurfaced yearly, but it has clearly\n\
+        been some... \n")
     print("time since that was true.")
 
     cont("Type cont to continue. (cont):\n",
@@ -185,22 +189,28 @@ def attack_c_bandit():
 
 def hide_c_bandit():
 
-    print("The bandit spots you hiding below the roadside & runs you through with their spear.")
+    print("The bandit spots you hiding below the roadside & runs you\n\
+        through with their spear.")
 
 def as_north_gate():
-    print("\nYou eventually cross the River Avon and take a smaller road left... \n")
-    print("to follow the river, finally seeing the walls of Aquae Sulis in the distance. \n")
-    print("When you finally near the gates of the town the sun is low in the sky... \n")
+    print("\nYou eventually cross the River Avon and take a smaller\n\
+        road left... \n")
+    print("to follow the river, finally seeing the walls of Aquae Sulis\n\
+        in the distance. \n")
+    print("When you finally near the gates of the town the sun is low\n\
+        in the sky... \n")
     print("and you see several guards begin to light lamps. \n")
     print("There are signs of battle and fire damage fromt the outside.")
     print("You anounce yourself to the centurions guarding the gate. \n")
     as_guards()
 
 
-# Town of Aquae Sulis. ************************************************************************************************ 
+# Town of Aquae Sulis. ****************************************************** 
 def as_guards():
-    print("\nThe centurion greets you in return and asks what brings you this way... \n")
-    print("alone in these dangerous times. You explain you are on a mission left...")
+    print("\nThe centurion greets you in return and asks what brings you\n\
+         this way... \n")
+    print("alone in these dangerous times. You explain you are on a\n\
+         mission left...")
     print("by your Pilus Prior.\n")
 
     three_choice_option("Ask what happened to the town?(town)\n\

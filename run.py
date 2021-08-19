@@ -161,7 +161,7 @@ def story_intro():
 # Western route. ******************************************************************************************************
 def road_west():
 
-    print("You take the road West, off the main Fosse Way, towards Aquae Sulis. \n")
+    print("\nYou take the road West, off the main Fosse Way, towards Aquae Sulis. \n")
     print("As you a approach a bend in the road you spot a lone Celtic bandit \n")
 
     two_choice_option("Do you attack the bandit or try to hide? (attack/hide): \n",
@@ -170,15 +170,15 @@ def road_west():
 
 def attack_c_bandit():
 
-    print("You defeat the lone bandit easily, your years of experience kicking in.\n")
+    print("\nYou defeat the lone bandit easily, your years of experience kicking in.\n")
     print("You continue along the road towards Aquae Sulis, noticing how... \n")
     print("the lack of available Lapidarii (stoneworkers) has left the surface... \n")
     print("of the road in a poor state. \n")
     print("Normally they would be resurfaced yearly, but it has clearly been some... \n")
     print("time since that was true.")
 
-    cont("Type yes to continue? (yes): \n",
-    "yes", as_north_gate)
+    cont("Type cont to continue. (cont):\n",
+    "cont", as_north_gate)
 
 
 def hide_c_bandit():
@@ -186,7 +186,7 @@ def hide_c_bandit():
     print("The bandit spots you hiding below the roadside & runs you through with their spear.")
 
 def as_north_gate():
-    print("You eventually cross the River Avon and take a smaller road left... \n")
+    print("\nYou eventually cross the River Avon and take a smaller road left... \n")
     print("to follow the river, finally seeing the walls of Aquae Sulis in the distance. \n")
     print("When you finally near the gates of the town the sun is low in the sky... \n")
     print("and you see several guards begin to light lamps. \n")
@@ -197,26 +197,70 @@ def as_north_gate():
 
 # Town of Aquae Sulis. ************************************************************************************************ 
 def as_guards():
-    print("The centurion greets you in return and asks what brings you this way... \n")
+    print("\nThe centurion greets you in return and asks what brings you this way... \n")
     print("alone in these dangerous times. You explain you are on a mission left...")
-    print("by your Pilus Prior.")
+    print("by your Pilus Prior.\n")
 
-    three_choice_option("Ask what happened to the town?(town)/n\
-         the townspeople? (people)/n\
-         or Flavius Sanctus? (Flavius)\n",
+    three_choice_option("Ask what happened to the town?(town)\n\
+         the townspeople? (people)\n\
+         or Flavius Sanctus? (flavius)\n",
     "town", "people", "flavius", as_town, as_people, as_flavius)
 
 
 def as_town():
-    print("The gua")
+    print("The guard tells you that the frequent attacks from the Celtae\n\
+        and the lack of skilled workmen has left the town in a bad state.\n")
+    print("Looking around the town you see collapsed rooves and\n\
+        burnt, crumbling walls of several buildings.")
+
+    two_choice_option("Ask what happened to the townspeople? (people)\n\
+        or Flavius Sanctus? (flavius)\n",
+        "people", "flavius", as_people, as_flavius) 
 
 
 def as_people():
-    print("people")
+    print("The guard tells you most of the citizens have left the town due to...\n\
+        constant raids by Celtae tribes from Hibernia.")
+        
+    two_choice_option("Ask what happened to the town?(town)\n\
+        or Flavius Sanctus? (flavius)\n",
+        "town", "flavius", as_town, as_flavius)
 
 
 def as_flavius():
-    print("flavius")
+    print("The guard tells you the Governor Flavius Sanctus is in the basilica with...\n\
+        members of the cohort.")
+
+    three_choice_option("Take the avenue to the centre of the town? (avenue),\n\
+        ask about the townspeople? (people)\n\
+        or ask about the town? (town)\n",
+        "avenue", "people", "town", as_avenue, as_people, as_town)
+
+
+def as_avenue():
+    print("Like most Roman towns, there are two main avenues,")
+    print("the one you are on runs North to South and at the center...")
+    print("of the town it meets the other which runs East to West.")
+    print("As you approach the town centre, you can see the temple and...")
+    print("amphitheatre nearest to you, then the baths, forum and basilica...")
+    print("behind them.")
+
+    three_choice_option("Explore the temple? (temple),\n\
+        explore the amphitheatre? (theatre)\n\
+        or continue to the baths, forum and basilica? (bath)\n",
+        "temple", "theatre", "bath", as_temple, as_theatre, as_bath)
+
+
+def as_temple():
+    print("temple")
+
+
+def as_theatre():
+    print("theatre")
+
+
+def as_bath():
+    print("bath")
 
 
 # Southern route. *****************************************************************************************************

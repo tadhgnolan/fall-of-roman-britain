@@ -19,6 +19,16 @@ def play_again(option):
         print("Gratias tibi ago! (Thanks for playing!)")
 
 
+def cont(prompt, opt1, path1):
+    while True:
+        choice = input(prompt)
+        if choice == opt1:
+            path1()
+            break
+        else:
+            print(f"\nPlease enter a valid option! ({opt1}\n")
+            continue
+
 def two_choice_option(prompt, opt1, opt2, path1, path2):
     """
     Allows input(prompt) of option(opt1,/opt2)
@@ -38,14 +48,28 @@ def two_choice_option(prompt, opt1, opt2, path1, path2):
             print(f"\nPlease enter a valid option! ({opt1} or {opt2}\n")
             continue
 
-def three_choice_option(opt1, opt2, opt3):
+def three_choice_option(prompt, opt1, opt2, opt3, path1, path2, path3):
     """
-    Function allows for a 3 point multiple choice option.
-    If inpput is valid, story will continue.
-    If input is not an integer, it will throw a ValueError
-    and prompt for input again. If the input is an integer but is not
-    valid, it will ask for input again
+    Allows input(prompt) of option(opt1,/opt2)
+    with three outcomes(path1, path2, path3).
+    When user enters correct option, loop is passed
+    and given path is executed.
     """
+    while True:
+        choice = input(prompt)
+        if choice == opt1:
+            path1()
+            break
+        elif choice == opt2:
+            path2()
+            break
+        elif choice == opt3:
+            path3()
+            break
+        else:
+            print(f"\nPlease enter a valid option! ({opt1}, {opt2} or {opt3}\n")
+            continue
+    
 
 def four_choice_option(opt1, opt2, opt3, opt4):
     """
@@ -152,20 +176,44 @@ def attack_c_bandit():
     print("Normally they would be resurfaced yearly, but it has clearly been some... \n")
     print("time since that was true.")
 
-    two_choice_option("Continue to Aquae Sulis? (continue): \n",
-    "continue", "continue", approach_aquae_sulis, approach_aquae_sulis)
+    cont("Type yes to continue? (yes): \n",
+    "yes", as_north_gate)
 
 
 def hide_c_bandit():
 
     print("The bandit spots you hiding below the roadside & runs you through with their spear.")
 
-def approach_aquae_sulis():
+def as_north_gate():
     print("You eventually cross the River Avon and take a smaller road left... \n")
     print("to follow the river, finally seeing the walls of Aquae Sulis in the distance. \n")
     print("When you finally near the gates of the town the sun is low in the sky... \n")
     print("and you see several guards begin to light lamps. \n")
+    print("There are signs of battle and fire damage fromt the outside.")
     print("You anounce yourself to the centurions guarding the gate. \n")
+    as_guards()
+
+
+# Town of Aquae Sulis. ************************************************************************************************ 
+def as_guards():
+    print("The centurion greets you in return and asks what brings you this way... \n")
+    print("alone in these dangerous times. You explain you are on a mission left...")
+    print("by your Pilus Prior.")
+
+    three_choice_option("Do you ask what happened to the town?(town) / people? (people), Flavius Sanctus? (Flavius) \n",
+    "town", "people", "flavius", as_town, as_people, as_flavius)
+
+
+def as_town():
+    print("town")
+
+
+def as_people():
+    print("people")
+
+
+def as_flavius():
+    print("flavius")
 
 
 # Southern route. *****************************************************************************************************

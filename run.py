@@ -17,7 +17,7 @@ def game_win(msg, function):
     print("I hope you enjoyed your time in the 5th Century.\n")
     print("More adventures await!\n")
     play_again(function)
-    
+
 
 def play_again(option):
     print("To play again type 'yes', to exit type anything else: \n")
@@ -38,6 +38,7 @@ def cont(prompt, opt1, path1):
             print(f"\nPlease enter a valid option! ({opt1}\n")
             continue
 
+
 def two_choice_option(prompt, opt1, opt2, path1, path2):
     """
     Allows input(prompt) of option(opt1,/opt2)
@@ -56,6 +57,7 @@ def two_choice_option(prompt, opt1, opt2, path1, path2):
         else:
             print(f"\nPlease enter a valid option! ({opt1} or {opt2}\n")
             continue
+
 
 def three_choice_option(prompt, opt1, opt2, opt3, path1, path2, path3):
     """
@@ -76,62 +78,43 @@ def three_choice_option(prompt, opt1, opt2, opt3, path1, path2, path3):
             path3()
             break
         else:
-            print(f"\nPlease enter a valid option! ({opt1}, {opt2} or {opt3}\n")
+            print(f"\nPlease enter a valid option! \n\
+            ({opt1}, {opt2} or {opt3}\n")
             continue
- 
-
-def four_choice_option(opt1, opt2, opt3, opt4):
-    """
-    Function allows for a 4 point multiple choice option.
-    If input is valid, story will continue.
-    If input is not an integer, it will throw a ValueError
-    and prompt for input again. If the input is an integer but is not
-    valid, it will ask for input again
-    """
-    while True:
-        choice = input("Which path do you choose? (1/2/3/4): \n")
-        try:
-            input_int = int(choice)
-            if input_int == 1:
-                opt1()
-                break
-            elif input_int == 2:
-                opt2()
-                break
-            elif input_int == 3:
-                opt3()
-                break
-            elif input_int == 4:
-                opt4()
-                break
-            else:
-                print("Please enter correct option (1/2/3/4.")
-                continue
-        except ValueError:
-            print("You must enter a 'number', try again\n")
 
 
 def intro_msg():
-
-
     """
     Function to print welcome graphics.
     """
-
-    termcolor.cprint("##########################################################################", 'green')
-    termcolor.cprint("#                                                                        #", 'green')
-    termcolor.cprint("#                    The Fall of Roman Britain                           #", 'green')
-    termcolor.cprint("#                                                                        #", 'green')
-    termcolor.cprint("#                                               _____                    #", 'green')
-    termcolor.cprint("#     _________________________________________|     \           ____    #", 'green') 
-    termcolor.cprint("#    /                                         |     ||---------/    \   #", 'green')
-    termcolor.cprint("#  /___________________________________________|     ||        |      |  #", 'green')
-    termcolor.cprint("#  \                                           |     ||        |      |  #", 'green')
-    termcolor.cprint("#    \_________________________________________|     ||---------\____/   #", 'green')
-    termcolor.cprint("#                                              |_____/                   #", 'green')
-    termcolor.cprint("#                                                                        #", 'green')
-    termcolor.cprint("#                          By Tadhg Nolan                                #", 'green')
-    termcolor.cprint("##########################################################################\n\n", 'green')
+    termcolor.cprint(
+        "##########################################################################", 'green')
+    termcolor.cprint(
+        "#                                                                        #", 'green')
+    termcolor.cprint(
+        "#                    The Fall of Roman Britain                           #", 'green')
+    termcolor.cprint(
+        "#                                                                        #", 'green')
+    termcolor.cprint(
+        "#                                               _____                    #", 'green')
+    termcolor.cprint(
+        "#     _________________________________________|     \           ____    #", 'green')
+    termcolor.cprint(
+        "#    /                                         |     ||---------/    \   #", 'green')
+    termcolor.cprint(
+        "#  /___________________________________________|     ||        |      |  #", 'green')
+    termcolor.cprint(
+        "#  \                                           |     ||        |      |  #", 'green')
+    termcolor.cprint(
+        "#    \_________________________________________|     ||---------\____/   #", 'green')
+    termcolor.cprint(
+        "#                                              |_____/                   #", 'green')
+    termcolor.cprint(
+        "#                                                                        #", 'green')
+    termcolor.cprint(
+        "#                          By Tadhg Nolan                                #", 'green')
+    termcolor.cprint(
+        "##########################################################################\n\n", 'green')
 
 
 def start_game():
@@ -150,32 +133,39 @@ def start_game():
             continue
         else:
             break
-    print(f"\n\n Salve {PLAYER_NAME}. Alae iacta est! (Greetings {PLAYER_NAME}. The die is cast!)\n\n")
+    print(f"\n\n Salve {PLAYER_NAME}. Alae iacta est! \n\
+    (Greetings {PLAYER_NAME}. The die is cast!)\n\n")
     story_intro()
 
 
 # Intro/start of story.
 def story_intro():
 
-    termcolor.cprint("It is late in the year 407 AD. Constantine III has taken his army to Gaul...\n", 'green')
-    print("and left Britannia defenceless.\n")
+    termcolor.cprint("It is late in the year 407 AD\n", 'green')
+    print("Constantine III has taken his army to Gaul and left Britannia\n\
+          defenceless.")
     print("You are a lone Roman Centurion, the last at your fort.\n")
-    print("Your Pilus Prior (commander of your cohort) has left a mission for you.\n")
+    print("Your Pilus Prior (commander of your cohort) has left a mission\n\
+    for you.")
     print("If within 6 months, the army does not return seek out... .\n")
     print("Flavius Sanctus in Aquae Sulis.\n")
 
-    two_choice_option("Do you go West to Aquae Sulis or South to Durnovana? (west/south): \n",
-        "west", "south", road_west, road_south)
+    two_choice_option("Do you go West to Aquae Sulis or South \n\
+    to Durnovana? (west/south): \n",
+                      "west", "south", road_west, road_south)
 
 
-# Western route. ******************************************************************************************************
+# Western route. **************************************************************
 def road_west():
 
-    print("\nYou take the road West, off the main Fosse Way, towards Aquae Sulis. \n")
-    print("As you a approach a bend in the road you spot a lone Celtic bandit \n")
+    print("\nYou take the road West, off the main Fosse Way, towards \n\
+    Aquae Sulis.")
+    print("As you a approach a bend in the road you spot a lone\n\
+    Celtic bandit")
 
-    two_choice_option("Do you attack the bandit or try to hide? (attack/hide): \n",
-    "attack", "hide", attack_c_bandit, hide_c_bandit)
+    two_choice_option("Do you attack the bandit or try\n\
+    to hide? (attack/hide): \n",
+                      "attack", "hide", attack_c_bandit, hide_c_bandit)
 
 
 def attack_c_bandit():
@@ -192,13 +182,14 @@ def attack_c_bandit():
     print("time since that was true.")
 
     cont("Type cont to continue. (cont):\n",
-    "cont", as_north_gate)
+         "cont", as_north_gate)
 
 
 def hide_c_bandit():
 
     print("The bandit spots you hiding below the roadside & runs you\n\
         through with their spear.")
+
 
 def as_north_gate():
     print("\nYou eventually cross the River Avon and take a smaller\n\
@@ -213,7 +204,7 @@ def as_north_gate():
     as_guards()
 
 
-# Town of Aquae Sulis. ***************************************************** 
+# Town of Aquae Sulis. *****************************************************
 def as_guards():
     print("\nThe centurion greets you in return and asks what brings you\n\
          this way... \n")
@@ -224,7 +215,8 @@ def as_guards():
     three_choice_option("Ask what happened to the town?(town)\n\
          the townspeople? (people)\n\
          or Flavius Sanctus? (flavius)\n",
-        "town", "people", "flavius", as_town, as_people, as_flavius)
+                        "town",
+                        "people", "flavius", as_town, as_people, as_flavius)
 
 
 def as_town():
@@ -235,16 +227,16 @@ def as_town():
 
     two_choice_option("Ask what happened to the townspeople? (people)\n\
         or Flavius Sanctus? (flavius)\n",
-        "people", "flavius", as_people, as_flavius) 
+                      "people", "flavius", as_people, as_flavius)
 
 
 def as_people():
     print("The guard tells you most of the citizens have left the town due to...\n\
         constant raids by Celtae tribes from Hibernia.")
-        
+
     two_choice_option("Ask what happened to the town?(town)\n\
         or Flavius Sanctus? (flavius)\n",
-        "town", "flavius", as_town, as_flavius)
+                      "town", "flavius", as_town, as_flavius)
 
 
 def as_flavius():
@@ -254,7 +246,8 @@ def as_flavius():
     three_choice_option("Take the avenue to the centre of the town? (avenue),\n\
         ask about the townspeople? (people)\n\
         or ask about the town? (town)\n",
-        "avenue", "people", "town", as_avenue, as_people, as_town)
+                        "avenue",
+                        "people", "town", as_avenue, as_people, as_town)
 
 
 def as_avenue():
@@ -268,80 +261,104 @@ def as_avenue():
     three_choice_option("Explore the temple? (temple),\n\
         explore the amphitheatre? (theatre)\n\
         or continue to the baths, forum and basilica? (bath)\n",
-        "temple", "theatre", "bath", as_temple, as_theatre, as_bath)
+                        "temple",
+                        "theatre", "bath", as_temple, as_theatre, as_bath)
 
 
 def as_temple():
-    print("You walk towards the modest square, wooden temple, dedicated to the godess Sulis Minerva.\n")
-    print("As you enter through the front, you notice members of the godess's cult making offerings...\n")
-    print("to her statue, enshrined on an alter at the rounded back of the temple.\n")
+    print("You walk towards the modest square, wooden temple, dedicated\n\
+    to the godess Sulis Minerva.\n")
+    print("As you enter through the front, you notice members of the\n\
+    godess's cult making offerings...\n")
+    print("to her statue, enshrined on an alter at the rounded back\n\
+    of the temple.\n")
 
     two_choice_option("Explore the theatre? (theatre)\n\
         or continue to the baths, forum and basilica? (bath)\n",
-        "theatre", "bath", as_theatre, as_bath)
+                      "theatre", "bath", as_theatre, as_bath)
 
 
 def as_theatre():
-    print("As you approach the amphitheatre you notice all of the wooden benches have been...\n")
-    print("either broken or burned, leaving behind the stone steps underneath.\n")
-    print("Some of the masonry has started to crumble as well. It is a shadow of its former self.")
+    print("As you approach the amphitheatre you notice all of the wooden\n\
+    benches have been...\n")
+    print("either broken or burned, leaving behind the stone steps\n\
+    underneath.")
+    print("Some of the masonry has started to crumble as well. It is a\n\
+    shadow of its former self.")
 
     two_choice_option("Explore the temple? (temple)\n\
         or continue to the baths, forum and basilica? (bath)\n",
-        "temple", "bath", as_temple, as_bath)
+                      "temple", "bath", as_temple, as_bath)
+
 
 def as_bath():
-    print("You walk further along the East-West avenue, towards the baths, forum and basilica\n")
+    print("You walk further along the East-West avenue, towards the baths,\n\
+    forum and basilica\n")
 
     three_choice_option("Explore the baths? (thermae),\n\
         the forum? (forum)\n\
         or the basilica? (basilica)\n",
-        "thermae", "forum", "basilica", as_thermae, as_forum, as_basilica)
+                        "thermae",
+                        "forum", "basilica", as_thermae, as_forum, as_basilica)
 
 
 def as_thermae():
-    print("The baths are a large complex of stone buildings, split up into naturally....\n")
-    print("& furnace heated baths of differing temperatures as well as sweat rooms.\n")
-    print("It seems to be well maintained, despite the state of the rest of the town...\n")
+    print("The baths are a large complex of stone buildings, split up into\n\
+    naturally....\n")
+    print("& furnace heated baths of differing temperatures as well as sweat\n\
+    rooms.\n")
+    print("It seems to be well maintained, despite the state of the rest of\n\
+    the town...\n")
     print("and you can hear that the furnaces are still being operated.\n")
     print("If you had more time, you would like to enjoy their use.\n")
 
     two_choice_option("Explore the forum? (forum)\n\
         or the basilica? (basilica)\n",
-        "forum", "basilica", as_forum, as_basilica)
+                      "forum", "basilica", as_forum, as_basilica)
 
 
 def as_forum():
-    print("You approach the forum, a large open rectangular space surrounded by columns.\n")
-    print("It is normally the site of all the towns major social, political and...\n")
-    print("religious gatherings and festivals, but there are signs it hasn't...\n")
-    print("been used in a some time. Debris and animal excrement litter the cobbles.\n")
-    
-    two_choice_option("Explore the baths? (thermae) or the basilica? (basilica)\n",
-       "thermae", "basilica", as_thermae, as_basilica)
+    print("You approach the forum, a large open rectangular space surrounded\n\
+    by columns.\n")
+    print("It is normally the site of all the towns major social,\n\
+    political and...\n")
+    print("religious gatherings and festivals, but there are signs\n\
+    it hasn't...\n")
+    print("been used in a some time. Debris and animal excrement\n\
+    litter the cobbles.\n")
+
+    two_choice_option("Explore the baths? (thermae) or the basilica?\n\
+    (basilica)\n",
+                      "thermae", "basilica", as_thermae, as_basilica)
 
 
 def as_basilica():
-    print("The basilica is a large rectangular stone building with a vaulted...\n")
-    print("roof, very similar in layout to a modern church. It serves the purpose...\n")
-    print("of court house, administrative center as well as many other functions.\n")
-    print("There are many members of a cohort standing gathered all around the interior.\n")
-    print("At the far end you spot Flavius Sanctus speaking to members of the cohort.\n")
+    print("The basilica is a large rectangular stone building with a\n\
+    vaulted...\n")
+    print("roof, very similar in layout to a modern church. It serves\n\
+    the purpose...\n")
+    print("of court house, administrative center as well as many other\n\
+    functions.\n")
+    print("There are many members of a cohort standing gathered all around\n\
+    the interior.\n")
+    print("At the far end you spot Flavius Sanctus speaking to members\n\
+    of the cohort.\n")
 
     cont("Type cont to continue. (cont):\n",
-    "cont", the_mission)
+         "cont", the_mission)
 
 
 def the_mission():
     print("As you approach, Flavius turns towards you and says...\n")
-    print(f"'Ah {PLAYER_NAME}. Welcome. Right on time, just as Gnaeus Calvinus...\n")
-    print("said you would be.' This takes you aback somewhat. As far as...\n")
-    print("you were aware, this was just a contingency plan.\n")
+    print(f"'Ah {PLAYER_NAME}. Welcome. Right on time, just as\n\
+    Gnaeus Calvinus...\n")
+    print("said you would be.' This takes you aback somewhat.\n")
+    print("As far as you were aware, this was just a contingency plan.\n")
     print("Snapping back to attention and realising who you're speaking to,\n")
     print("you ask 'How may I be of service.\n")
 
     cont("Type cont to continue. (cont):\n",
-    "cont", the_mission_2)
+         "cont", the_mission_2)
 
 
 def the_mission_2():
@@ -354,7 +371,7 @@ def the_mission_2():
     print("First though, make sure you get some rest.\n")
     print("We will speak more in the morning.")
     cont("Type cont to continue. (cont):\n",
-    "cont", the_mission_3)
+         "cont", the_mission_3)
 
 
 def the_mission_3():
@@ -367,7 +384,7 @@ def the_mission_3():
 
     two_choice_option("Take the offer of the century? (cent)\n\
         or depart alone? (solo)\n",
-        "cent", "solo", south_cent, south_solo)
+                      "cent", "solo", south_cent, south_solo)
 
 
 def south_cent():
@@ -380,19 +397,18 @@ def south_cent():
     print("your side.")
 
     cont("Type cont to continue. (cont):\n",
-    "cont", durnovaria_east_gate)
-    
+         "cont", durnovaria_east_gate)
+
 
 def south_solo():
     print("You head off on your own, figuring you may be able to use...\n")
     print("stealth to your advantage.")
 
     cont("Type cont to continue. (cont):\n",
-    "cont", road_south)
+         "cont", road_south)
 
 
-
-# Southern route. **********************************************************
+# Southern route.
 def road_south():
     global has_century
     has_century = False
@@ -403,7 +419,7 @@ def road_south():
 
     two_choice_option("Do you attack the bandits or try to\n\
         hide? (attack/hide): \n",
-    "attack", "hide", attack_s_bandits, hide_s_bandits)
+                      "attack", "hide", attack_s_bandits, hide_s_bandits)
 
 
 def attack_s_bandits():
@@ -413,18 +429,19 @@ def attack_s_bandits():
     print("overwhelmed. \n")
     game_over("You are gravely wounded and die below the roadside,\n\
         mission incomplete.\n",
-    start_game)
+              start_game)
 
 
 def hide_s_bandits():
 
     print("You successfully hide in a ditch by the roadside and the\n\
         bandits pass you by.\n")
-    
+
     cont("Type cont to continue. (cont):\n",
-    "cont", durnovaria_east_gate)
+         "cont", durnovaria_east_gate)
 
 
+# Durnovaria
 def durnovaria_east_gate():
     print("From a distance you can see smoke rising over the town.\n")
     print("As you approach the smaller East gate over the river...\n")
@@ -432,23 +449,22 @@ def durnovaria_east_gate():
     print("in sight. You continue on towards the East-West avenue.\n")
 
     cont("Type cont to continue. (cont):\n",
-    "cont", dv_avenue)
+         "cont", dv_avenue)
 
 
 def dv_avenue():
     if has_century:
-       cont("You head along the avenue towards the forum, but\n\
+        cont("You head along the avenue towards the forum, but\n\
         a group of Saxons equal in size to your own stands in your way.\n\
         you have no choice but to fight them. It's a grueling battle...\n\
         and 30 centurions are lost, but you somehow survive and defeat...\n\
         every last Saxon. Type cont to continue. (cont):\n",
-        "cont", dv_forum)
+             "cont", dv_forum)
     else:
         game_over("You head along the avenue towards the forum, but\n\
         a huge group of Saxons stands in your way. They've noticed you,\n\
         so you have no choice but to fight them. You are slayed on the\n\
         spot by the Saxon marauders", start_game)
-
 
 
 def dv_forum():
@@ -457,7 +473,7 @@ def dv_forum():
 
     two_choice_option("Do you head towards the baths (baths), or the\n\
         basilica? (basilica):\n",
-        "baths", "basilica", dv_thermae, dv_basilica)
+                      "baths", "basilica", dv_thermae, dv_basilica)
 
 
 def dv_thermae():
@@ -466,7 +482,7 @@ def dv_thermae():
     print("There is nothing more to see here.")
 
     cont("Type cont to continue. (cont):\n",
-    "cont", dv_basilica)
+         "cont", dv_basilica)
 
 
 def dv_basilica():
@@ -475,9 +491,10 @@ def dv_basilica():
     print("your group.")
     print("Their leader welcomes you in and says Lucius Septimius...")
     print("is waiting for you inside.")
-    
+
     cont("Type cont to continue. (cont):\n",
-    "cont", journeys_end)
+         "cont", journeys_end)
+
 
 def journeys_end():
     print("Lucius Septimius greets you warmly.")
@@ -486,12 +503,12 @@ def journeys_end():
     print("'I am sorry to say this, but there is very little hope...")
     print("left for Britannia.'")
     print("He disappears for a moment and returns with another scroll.")
-    print("'I am sorry my friend {PLAYER_NAME}, but your...")
-    print("journey has only just begun.'")
+    print(f"'I am sorry my friend {PLAYER_NAME}, but your...'")
+    print("'journey has only just begun.'")
     print("'You must bring this to Rome by way of Gaul.'")
     print("'It is our last and only chance.'")
-    game_win("To be continued....")
-    
+    game_win("To be continued....", 
+             start_game)
+
 
 start_game()
-

@@ -147,7 +147,8 @@ def start_game():
 # Intro/start of story.
 def story_intro():
 
-    print("It is late in the year 407AD. Constantine III has taken his army to Gaul and left Britania defenceless.\n")
+    print("It is late in the year 407AD. Constantine III has taken his army to Gaul and...\n")
+    print("left Britania defenceless.\n")
     print("You are a lone Roman Centurion, the last at your fort.\n")
     print("Your Pilus Prior (commander of your cohort) has left a mission for you.\n")
     print("If within 6 months, the army does not return seek out... .\n")
@@ -200,12 +201,14 @@ def as_guards():
     print("alone in these dangerous times. You explain you are on a mission left...")
     print("by your Pilus Prior.")
 
-    three_choice_option("Do you ask what happened to the town?(town) / people? (people), Flavius Sanctus? (Flavius) \n",
+    three_choice_option("Ask what happened to the town?(town)/n\
+         the townspeople? (people)/n\
+         or Flavius Sanctus? (Flavius)\n",
     "town", "people", "flavius", as_town, as_people, as_flavius)
 
 
 def as_town():
-    print("town")
+    print("The gua")
 
 
 def as_people():

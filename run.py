@@ -11,6 +11,14 @@ def game_over(msg, function):
     play_again(function)
 
 
+def game_win(msg, function):
+    print(msg)
+    print("Congratulations on completing Fall of Roman Britain.\n")
+    print("I hope you enjoyed your time in the 5th Century.\n")
+    print("More adventures await!\n")
+    play_again(function)
+    
+
 def play_again(option):
     print("To play again type 'yes', to exit type anything else: \n")
     choice = input()
@@ -205,7 +213,7 @@ def as_north_gate():
     as_guards()
 
 
-# Town of Aquae Sulis. ****************************************************** 
+# Town of Aquae Sulis. ***************************************************** 
 def as_guards():
     print("\nThe centurion greets you in return and asks what brings you\n\
          this way... \n")
@@ -343,38 +351,147 @@ def the_mission_2():
     print("and we have precious few defenders left.\n")
     print("I need you to bring this scroll to Lucius Septimius...\n")
     print("in Durnovana as quickly as possible.\n")
-
+    print("First though, make sure you get some rest.\n")
+    print("We will speak more in the morning.")
     cont("Type cont to continue. (cont):\n",
     "cont", the_mission_3)
 
 
 def the_mission_3():
-    print("the mission 3")
+    print("You wake with the sunrise. After washing and getting some...")
+    print("food, you are taken by one of the centurions to meet Flavius.")
+    print("'I hope your rest was good' says Flavius.")
+    print("'You have a possibly long and dangerous journey ahead'")
+    print("'You must set out immediatly, but I can offer some help'")
+    print("'A century (up to 100 men) of the towns cohort can join you.'")
+
+    two_choice_option("Take the offer of the century? (cent)\n\
+        or depart alone? (solo)\n",
+        "cent", "solo", south_cent, south_solo)
+
+
+def south_cent():
+    global has_century
+    has_century = True
+    print("You take the generous offer and set out with the centurions...")
+    print("towards Durnovaria.")
+    print("Along the way you come across a large group of Saxon bandits,")
+    print("but they are no match for you and the 100 warriors at...")
+    print("your side.")
+
+    cont("Type cont to continue. (cont):\n",
+    "cont", durnovaria_east_gate)
+    
+
+def south_solo():
+    print("You head off on your own, figuring you may be able to use...\n")
+    print("stealth to your advantage.")
+
+    cont("Type cont to continue. (cont):\n",
+    "cont", road_south)
 
 
 
-# Southern route. *****************************************************************************************************
+# Southern route. **********************************************************
 def road_south():
-
+    global has_century
+    has_century = False
     print("You take the road South towards Durnovana. \n")
-    print("In the distance you see a large group of Saxon bandits approaching. \n")
+    print("In the distance you see a large group of Saxon bandits\n\
+        approaching. \n")
     print("They haven't seen you yet. \n")
 
-    two_choice_option("Do you attack the bandits or try to hide? (attack/hide): \n",
+    two_choice_option("Do you attack the bandits or try to\n\
+        hide? (attack/hide): \n",
     "attack", "hide", attack_s_bandits, hide_s_bandits)
 
 
 def attack_s_bandits():
 
-    print("You attempt to surprise the bandits with an attack, but they are too many & you are... \n")
+    print("You attempt to surprise the bandits with an attack, but they\n\
+        are too many & you are... \n")
     print("overwhelmed. \n")
-    game_over("You are gravely wounded and die below the roadside, mission incomplete.\n",
+    game_over("You are gravely wounded and die below the roadside,\n\
+        mission incomplete.\n",
     start_game)
+
 
 def hide_s_bandits():
 
-    print("You successfully hide in a ditch by the roadside and the bandits pass you by. \n")
+    print("You successfully hide in a ditch by the roadside and the\n\
+        bandits pass you by.\n")
+    
+    cont("Type cont to continue. (cont):\n",
+    "cont", durnovaria_east_gate)
 
+
+def durnovaria_east_gate():
+    print("From a distance you can see smoke rising over the town.\n")
+    print("As you approach the smaller East gate over the river...\n")
+    print("you see the watchpost above it ablaze and no guards...\n")
+    print("in sight. You continue on towards the East-West avenue.\n")
+
+    cont("Type cont to continue. (cont):\n",
+    "cont", dv_avenue)
+
+
+def dv_avenue():
+    if has_century:
+       cont("You head along the avenue towards the forum, but\n\
+        a group of Saxons equal in size to your own stands in your way.\n\
+        you have no choice but to fight them. It's a grueling battle...\n\
+        and 30 centurions are lost, but you somehow survive and defeat...\n\
+        every last Saxon. Type cont to continue. (cont):\n",
+        "cont", dv_forum)
+    else:
+        game_over("You head along the avenue towards the forum, but\n\
+        a huge group of Saxons stands in your way. They've noticed you,\n\
+        so you have no choice but to fight them. You are slayed on the\n\
+        spot by the Saxon marauders", start_game)
+
+
+
+def dv_forum():
+    print("The forum is a mess of dead bodies and fallen columns.")
+    print("To the South are the baths and to the North is the Basilica.")
+
+    two_choice_option("Do you head towards the baths (baths), or the\n\
+        basilica? (basilica):\n",
+        "baths", "basilica", dv_thermae, dv_basilica)
+
+
+def dv_thermae():
+    print("The baths are a burnt out husk. One half of the main...")
+    print("building has collapsed into the baths themselves.")
+    print("There is nothing more to see here.")
+
+    cont("Type cont to continue. (cont):\n",
+    "cont", dv_basilica)
+
+
+def dv_basilica():
+    print("You finally reach the basilica. A group of centurions...")
+    print("are guarding the front and look very relieved to see...")
+    print("your group.")
+    print("Their leader welcomes you in and says Lucius Septimius...")
+    print("is waiting for you inside.")
+    
+    cont("Type cont to continue. (cont):\n",
+    "cont", journeys_end)
+
+def journeys_end():
+    print("Lucius Septimius greets you warmly.")
+    print("You hand him the scroll and as he reads ithe nods with...")
+    print("a grim look on his face.")
+    print("'I am sorry to say this, but there is very little hope...")
+    print("left for Britannia.'")
+    print("He disappears for a moment and returns with another scroll.")
+    print("'I am sorry my friend {PLAYER_NAME}, but your...")
+    print("journey has only just begun.'")
+    print("'You must bring this to Rome by way of Gaul.'")
+    print("'It is our last and only chance.'")
+    game_win("To be continued....")
+    
 
 start_game()
 

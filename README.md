@@ -34,6 +34,12 @@
 
 - two_choice_option function. Loop, which, when given correct input, allows one of two given paths to be executed.
 
+![Two Choice Image](documentation/readme_images/two_choice.PNG)
+
+![Two Choice Image 2](documentation/readme_images/two_choice_2.PNG)
+
+![Two Choice Image 3](documentation/readme_images/two_choice_3.PNG)
+
 - three_choice_option function. Loop, which, when given correct input, allows one of three given paths to be executed. 
 
 ### Features Left to Implement
@@ -43,9 +49,9 @@
 
 ## Testing 
 
-### Manual and debugger testing
+### Manual testing
 
-- Manually testing each option  										
+- Manually testing each option.  										
 
 ### Validator Testing 
 
@@ -78,8 +84,7 @@ This section should describe the process you went through to deploy the project 
     `> remove: Total 10 (delta 1), reused 10 (delta 1)`
     `> Unpacking objects: 100% (10/10), done.`
    
-  
- - The live link can be found here - / 
+   
 
 ## Credits 
 
@@ -87,10 +92,10 @@ This section should describe the process you went through to deploy the project 
  
 ### Content 
 
-- https://github.com/roomacarthur/escape-the-cave/blob/main/run.py
+- [Escape the Cave](https://github.com/roomacarthur/escape-the-cave/blob/main/run.py) - Used  and modified code from this Github repository.
 
 
 ### Special Thanks
 
-- Cormac Nolan
-- Tim Nelson
+- Cormac Nolan - Feedback and advice.
+- Tim Nelson - Mentor.

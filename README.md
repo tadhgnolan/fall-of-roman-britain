@@ -30,9 +30,13 @@
 
 - cont function to allow continuity from one text block to the next.
 
+![Cont code](documentation/readme_images/cont_code.PNG)
+
 ![Cont Image](documentation/readme_images/cont.PNG)
 
 - two_choice_option function. Loop, which, when given correct input, allows one of two given paths to be executed.
+
+![Two Choice Code](documentation/readme_images/two_choice_code.PNG)
 
 ![Two Choice Image](documentation/readme_images/two_choice.PNG)
 
@@ -41,6 +45,16 @@
 ![Two Choice Image 3](documentation/readme_images/two_choice_3.PNG)
 
 - three_choice_option function. Loop, which, when given correct input, allows one of three given paths to be executed. 
+
+![Three Choice Code](documentation/readme_images/three_choice_code.PNG)
+
+![Three Choice Image](documentation/readme_images/three_choice.PNG)
+
+![Three Choice Image 2](documentation/readme_images/three_choice_2.PNG)
+
+![Three Choice Image 3](documentation/readme_images/three_choice_3.PNG)
+
+![Three Choicec Image 4](documentation/readme_images/three_choice_4.PNG)
 
 ### Features Left to Implement
 

@@ -189,9 +189,9 @@ def hide_c_bandit():
 
     print("The bandit spots you hiding below the roadside & runs you\n\
         through with their spear.")
-
-    cont("Type cont to continue. (cont):\n",
-         "cont", as_north_gate)
+    game_over("You are gravely wounded and die below the roadside,\n\
+        mission incomplete.\n",
+              start_game)
 
 
 def as_north_gate():

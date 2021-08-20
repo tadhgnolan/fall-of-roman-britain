@@ -11,7 +11,8 @@
 2. [Technologies](#technologies)
 3. [Testing](#testing)
 4. [Credits](#credits)
-5. [Deployment](deployment)
+5. [Deployment](#deployment)
+6. [Credits](#credits)
 
 ## Intro
 

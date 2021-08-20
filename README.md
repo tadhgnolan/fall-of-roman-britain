@@ -9,10 +9,9 @@
 # Table of Contents
 1. [Intro](#intro)
 2. [Technologies](#technologies)
-3. [Bugs and Fixes](#bugs--fixes)
-4. [Testing](#testing)
-5. [Credits](#credits)
-6. [Deployment](deployment)
+3. [Testing](#testing)
+4. [Credits](#credits)
+5. [Deployment](deployment)
 
 ## Intro
 
@@ -106,25 +105,29 @@
 - Inventory.
 - Additional story branches and decisions.
 
-## Testing 
+## Testing
 
 ### Manual testing
 
-- Manually testing each option.  										
+- Manually testing each each path.  										
 
 ### Validator Testing 
 
-
+Used [PEP8 online](http://pep8online.com/) code checker to correct any errors in my code. 
 
 ### Unfixed Bugs
 
+Line too long for ASCII art. I was unable to resolve this issue.
+![PEP8 Online Image](documentation/readme_images/pep8online_results.PNG)
 
-## Deployment
-
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
+## Deployment 
 
 - The site was deployed via Heroku. The steps to deploy are as follows: 
-   
+  
+  -  Enter following command in terminal: 'Pip3 freeze > requirements.txt'.
+  - From Heroku Dashboard: Create new app. Select region. Go to settings tab => add buildpacks for Python and NodeJS. Make sure Python is on top and NodeJS beneath.
+  - Go to deploy section and select Github.
+  - Search for repository name => click connect => click automatic or manual deploy.
   
 - To clone to a local machine follow these steps:
   

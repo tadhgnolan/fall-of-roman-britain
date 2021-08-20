@@ -35,7 +35,7 @@ def cont(prompt, opt1, path1):
             path1()
             break
         else:
-            print(f"\nPlease enter a valid option! ({opt1}\n")
+            print(f"\nPlease enter a valid option! ({opt1})\n")
             continue
 
 
@@ -142,15 +142,15 @@ def start_game():
 def story_intro():
 
     termcolor.cprint("It is late in the year 407 AD\n", 'green')
-    print("Constantine III has taken his army to Gaul and left Britannia\n\
-          defenceless.")
+    termcolor.cprint("Constantine III has taken his army to Gaul and\n\
+                    left Britanniadefenceless.", 'green')
     print("You are a lone Roman Centurion, the last at your fort.\n")
     print("Your Pilus Prior (commander of your cohort) has left a mission\n\
     for you.")
-    print("If within 6 months, the army does not return seek out... .\n")
+    print("If within 6 months, the army does not return seek out\n")
     print("Flavius Sanctus in Aquae Sulis.\n")
 
-    two_choice_option("Do you go West to Aquae Sulis or South \n\
+    two_choice_option("Do you go West to Aquae Sulis or South\n\
     to Durnovana? (west/south): \n",
                       "west", "south", road_west, road_south)
 
@@ -189,6 +189,9 @@ def hide_c_bandit():
 
     print("The bandit spots you hiding below the roadside & runs you\n\
         through with their spear.")
+
+    cont("Type cont to continue. (cont):\n",
+         "cont", as_north_gate)
 
 
 def as_north_gate():
@@ -507,7 +510,7 @@ def journeys_end():
     print("'journey has only just begun.'")
     print("'You must bring this to Rome by way of Gaul.'")
     print("'It is our last and only chance.'")
-    game_win("To be continued....", 
+    game_win("To be continued....",
              start_game)
 
 

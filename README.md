@@ -53,7 +53,7 @@
 
 - intro_msg function - Prints intro text with ASCII artwork.
 
-![Intro Msg Code](documentation/readme_images/intro msg code.PNG)
+![Intro Msg Code](documentation/readme_images/intro_msg code.PNG)
 
 ![Intro Msg Image](documentation/readme_images/intro_msg.PNG)
 

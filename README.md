@@ -4,19 +4,40 @@
 
 ![Fall of Roman Britain live example](documentation/readme_images/demo.gif)
 
+[Live Site](https://fall-of-roman-britain.herokuapp.com/)
+
+# Table of Contents
+1. [Intro](#intro)
+2. [Technologies](#technologies)
+3. [Bugs and Fixes](#bugs--fixes)
+4. [Testing](#testing)
+5. [Credits](#credits)
+6. [Deployment](deployment)
+
 ## Intro
 
  - Fall of Roman Britain is a multiple choice text based game that pays tribute to classic text adventure games such as "Zork" and choose your own adventure books.  
 
-## Design
+### Design
 
 [Code Logic Flow Chart](documentation/flowchart_main.png)
 
-## Users
+### Users
 
 - The user will either be of the age group familiar with these books and may find some nostalgia in the reference present or completely new to the convention and find some novelty within it. They should expect to find a story with multiple choices for both direction and action, as per the orignal inspiration. Certain choices will have consequences at the end of the game.
 
+## Technologies
 
+### Languages
+
+- [Python](https://www.python.org/about/)
+
+### Other Technologies and Libraries 
+
+- [GitHub](https://github.com/)
+- [Termcolor](https://pypi.org/project/termcolor/)
+- [GitPod](https://www.gitpod.io/about/)
+- [Heroku](https://heroku.com)
 
 ## Features 
 
@@ -63,6 +84,22 @@
 ![Three Choice Image 3](documentation/readme_images/three_choice_3.PNG)
 
 ![Three Choicec Image 4](documentation/readme_images/three_choice_4.PNG)
+
+- game_over function - Presents player with an end screen when they make a choice leading to character death.
+
+![Game Over Code](documentation/readme_images/game_over_code.PNG)
+
+![Game Over Image](documentation/readme_images/game_over.PNG)
+
+- game_win function - Presents player with a win screen when they complete the adventure sucessfully.
+
+![Game Win Code](documentation/readme_images/game_win_code.PNG)
+
+![Game Win Image](documentation/readme_images/game_win.PNG)
+
+- play again function - Works with both game_over and game_win functions to allow the player to either start again or exit the game.
+
+![Play Again Code](documentation/readme_images/play_again_code.PNG)
 
 ### Features Left to Implement
 

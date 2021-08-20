@@ -1,20 +1,32 @@
 # Fall of Roman Britain
+## by Tadhg Nolan
+![Fall of Roman Britain responsive](documentation/readme_images/responsive_mockup.PNG)
 
- - Fall of Roaman Britain is a multiple choice text based game that pays tribute to the classic choose your own adventure books such as "Space Patrol", "The Deadly Shadow" and "The Cave of Time", as well as some slight reference to older more complex text adventure games such as "Zork".  
+![Fall of Roman Britain live example](documentation/readme_images/demo.gif)
 
- - The user will either be of the age group familiar with these books and may find some nostalgia in the reference present or completely new to the convention and find some novelty within it. They should expect to find a story with multiple choices for both direction and action, as per the orignal inspiration. Certain choices will have consequences at the end of the game.
+## Intro
 
-![Code Logic Flow Chart](https://github.com/tadhgnolan/fall-of-roman-britain/main/documentation/flowchart_main.png)
+ - Fall of Roman Britain is a multiple choice text based game that pays tribute to classic text adventure games such as "Zork" and choose your own adventure books.  
+
+## Design
+
+[Code Logic Flow Chart](documentation/flowchart_main.png)
+
+## Users
+
+- The user will either be of the age group familiar with these books and may find some nostalgia in the reference present or completely new to the convention and find some novelty within it. They should expect to find a story with multiple choices for both direction and action, as per the orignal inspiration. Certain choices will have consequences at the end of the game.
+
+
 
 ## Features 
 
 ### Existing Features
 
 - Player Name. Function which takes input of player name and sets it as a global variable so it can be recalled later.
-![Player Name Image](https://github.com/tadhgnolan/fall-of-roman-britain/main/documentation/readme_images/PLAYER_NAME.PNG)
-![Player Name Image 2](https://github.com/tadhgnolan/fall-of-roman-britain/main/documentation/readme_images/PLAYER_NAME2.PNG)
+![Player Name Image](documentation/readme_images/PLAYER_NAME.PNG)
+![Player Name Image 2](documentation/readme_images/PLAYER_NAME2.PNG)
 - cont function to allow continuity from one text block to the next.
-![Cont Image](https://github.com/tadhgnolan/fall-of-roman-britain/main/documentation/readme_images/cont.PNG)
+![Cont Image](documentation/readme_images/cont.PNG)
 - two_choice_option function. Loop, which, when given correct input, allows one of two given paths to be executed.
 - three_choice_option function. Loop, which, when given correct input, allows one of three given paths to be executed. 
 
@@ -51,9 +63,9 @@ This section should describe the process you went through to deploy the project 
   - Open Git Bash.
   - Change the current working directory to the location where you want the cloned directory.
   - Type git clone, and then paste the URL you copied earlier.
-    `$ git clone https://github.com/tadhgnolan/fall-of-roman-britain`
+    `$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
   - Press Enter to create your local clone. 
-  	`$ git clone https://github.com/tadhgnolan/fall-of-roman-britain`
+  	`$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
     ``> Cloning into `Spoon-Knife`...``
     `> remote: Counting objects: 10, done.`
     `> remote: Compressing objects: 100% (8/8), done.`

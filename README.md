@@ -22,19 +22,27 @@
 
 ### Existing Features
 
-- Player Name. Function which takes input of player name and sets it as a global variable so it can be recalled later.
+- Start_Game - Function presents takes input of PLAYER_NAME, sets it as a global variable so it can be recalled throughout the game, then utilizes it with a player greeting.
+
+![Start Game Code Image](documentation/readme_images/start_game_code.PNG)
 
 ![Player Name Image](documentation/readme_images/PLAYER_NAME.PNG)
 
 ![Player Name Image 2](documentation/readme_images/PLAYER_NAME2.PNG)
 
-- cont function to allow continuity from one text block to the next.
+- intro_msg function - Prints intro text with ASCII artwork.
+
+![Intro Msg Code](documentation/readme_images/intro msg code.PNG)
+
+![Intro Msg Image](documentation/readme_images/intro_msg.PNG)
+
+- cont function - allows continuity from one text block to the next.
 
 ![Cont code](documentation/readme_images/cont_code.PNG)
 
 ![Cont Image](documentation/readme_images/cont.PNG)
 
-- two_choice_option function. Loop, which, when given correct input, allows one of two given paths to be executed.
+- two_choice_option function - Loop, which, when given correct input, allows one of two given paths to be executed.
 
 ![Two Choice Code](documentation/readme_images/two_choice_code.PNG)
 
@@ -44,7 +52,7 @@
 
 ![Two Choice Image 3](documentation/readme_images/two_choice_3.PNG)
 
-- three_choice_option function. Loop, which, when given correct input, allows one of three given paths to be executed. 
+- three_choice_option function - Loop, which, when given correct input, allows one of three given paths to be executed. 
 
 ![Three Choice Code](documentation/readme_images/three_choice_code.PNG)
 

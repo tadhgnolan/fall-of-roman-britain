@@ -143,12 +143,12 @@ def story_intro():
 
     termcolor.cprint("It is late in the year 407 AD\n", 'green')
     termcolor.cprint("Constantine III has taken his army to Gaul and\n\
-                    left Britanniadefenceless.", 'green')
-    print("You are a lone Roman Centurion, the last at your fort.\n")
-    print("Your Pilus Prior (commander of your cohort) has left a mission\n\
-    for you.")
-    print("If within 6 months, the army does not return seek out\n")
-    print("Flavius Sanctus in Aquae Sulis.\n")
+                    left Britanniadefenceless.\n", 'green')
+    termcolor.cprint("You are a lone Roman Centurion, the last at your fort.\n", 'green')
+    termcolor.cprint("Your Pilus Prior (commander of your cohort) has left a mission\n\
+    for you.\n", 'green')
+    termcolor.cprint("If within 6 months, the army does not return seek out\n", 'green')
+    termcolor.cprint("Flavius Sanctus in Aquae Sulis.\n", 'green')
 
     two_choice_option("Do you go West to Aquae Sulis or South\n\
     to Durnovana? (west/south): \n",

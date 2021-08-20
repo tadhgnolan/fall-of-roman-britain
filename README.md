@@ -23,11 +23,17 @@
 ### Existing Features
 
 - Player Name. Function which takes input of player name and sets it as a global variable so it can be recalled later.
+
 ![Player Name Image](documentation/readme_images/PLAYER_NAME.PNG)
+
 ![Player Name Image 2](documentation/readme_images/PLAYER_NAME2.PNG)
+
 - cont function to allow continuity from one text block to the next.
+
 ![Cont Image](documentation/readme_images/cont.PNG)
+
 - two_choice_option function. Loop, which, when given correct input, allows one of two given paths to be executed.
+
 - three_choice_option function. Loop, which, when given correct input, allows one of three given paths to be executed. 
 
 ### Features Left to Implement
